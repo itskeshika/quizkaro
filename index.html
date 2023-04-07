@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizKaroo</title>
     <link rel="stylesheet" href="app.css">
+    <script src="https://kit.fontawesome.com/cd066a5362.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,39 +18,82 @@
         </div>
     </div>
     <section class="big-container">
-
         <div class="container">
-            <div class="pic">
-                <img class="illustration" src="illustration/question-mark.png"
-                    alt="two people standing near question mark">
-            </div>
             <div class="rules">
                 <div class="border">
                     <p class="welcome">Welcome to my Game!</p>
                     <p class="read">Read the rules below:</p>
                     <ul>
-                        <li>No cheating.</li>
-                        <li>Answer the question within the timer.</li>
-                        <li>This is a one time game only.</li>
-                        <li>The Quizmaster is always right</li>
-                        <li>There will be negative marking.</li>
+                        <li>You will have only <span><b>15 seconds</b></span> per each question.</li>
+                        <li>Once you select your answer it cannot be undone.</li>
+                        <li>You can't select any option after time goes off.</li>
+                        <li>You can't exit from quiz while you are playing.</li>
+                        <li>You will get points on the basis of your correct answers.</li>
                     </ul>
                 </div>
             </div>
         </div>
         <form action="#">
             <div class="checkbox">
-                <input type="checkbox" required>
-                <p>I accept all the rules and agree to proceed further.</p>
+                <label for="check"><input type="checkbox" id="check" required>
+                    <p class="acceptance">I accept all the rules and agree to proceed further.</p></label>
             </div>
             <div class="buttons">
-                <button class="game">game</button>
-                <button><a href="aboutme.html">About Me</a></button>
+                <button class="game"> Play Game</button>
             </div>
         </form>
         
     </section>
-    <script src="app.js"></script>
+    <div class="quiz_box">
+        <div class=" sub-header timer">
+            <div class="time_text">Remaining time : </div>
+            <div class="timer_sec">15</div>
+        </div>
+        <section>
+            <div class="que_text">
+                <span>What is my favourite color?</span>
+            </div>
+            <div class="option_list">
+                <div class="options">
+                    <span>Pink</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="options">
+                    <span>Red</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="options">
+                    <span>Green</span>
+                </div>
+                <div class="options">
+                    <span>Blue</span>
+                </div>
+            </div>
+        </section>
+        <div class="footer">
+            <div class="total-que">
+                <span> <p><b>2</b></p> of <p><b>10</b></p> questions</span>
+            </div>
+            <button class="next_que">Next</button>
+        </div>
+    </div>
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>  
+        </div>
+        <div class="complete_text">
+            You've completed the Quiz!
+        </div>
+        <div class="score_text">
+            <span>and, sorry You got only <p>2</p> out of <p>10</p></span>
+        </div>
+        <div class="buttons">
+            <button class="exit">Exit Quiz</button>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+    <script src="js/question.js"></script>
 </body>
 
 </html>
