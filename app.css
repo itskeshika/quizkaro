@@ -161,6 +161,7 @@ b {
     font-weight: 700;
 }
 
+
 .quiz_box section{
     padding: 25px 30px 20px 30px;
 }
@@ -214,6 +215,27 @@ section .option_list :hover{
     border-color: #a42834;
 }
 
+.correct{
+    color: #23903c;
+    background-color: #f8d7da;
+    border-color: #23903c;
+    background-color: aliceblue;
+    border: 1px solid #84c1fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+}
+
+.incorrect{
+    color: #a42834;
+    background-color: #f8d7da;
+    border-color: #a42834;
+}
+
+.disabled{
+    pointer-events: none;   
+}
+
 .quiz_box .footer{
     height: 60px;
     width: 100%;
@@ -237,20 +259,21 @@ section .option_list :hover{
     padding-left: 0px;
 }
 
-.footer .next_que{
+.footer .next_btn{
+    display: none;
     margin-top: 54px;
     color: #fff;
     font-weight: 600;
 }
 
-.footer .next_que:hover{
+.footer .next_btn:hover{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .result_box{
     background: #fff;
     width: 450px;
-    padding: 25px 30px;
+    padding: 30px 30px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -259,6 +282,11 @@ section .option_list :hover{
     margin: 0 auto;
     text-align: center;
     display: none;
+}
+
+.activeResult{
+    display: block;
+    margin-bottom: 45px;
 }
 
 .result_box .icon{
